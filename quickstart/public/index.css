@@ -1,5 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Share+Tech+Mono);
-
+html,body{
+  width:100%;
+  height:100%;
+}
 body,
 p {
   padding: 0;
@@ -9,28 +12,38 @@ p {
 body {
   background: #272726;
 }
+*{
+  box-sizing:border-box;
+}
+body,div:after{
+  display:block;
+  content:"";
+  clear:both;
+}
 
 div#remote-media {
-  height: 43%;
-  width: 100%;
+  height: 100%;
+  width: 70%;
   background-color: #fff;
   text-align: center;
-  margin: auto;
+  float: left;
 }
 
 div#remote-media video {
   border: 1px solid #272726;
   margin: 3em 2em;
-  height: 70%;
-  max-width: 27% !important;
+  max-width: 50% !important;
   background-color: #272726;
   background-repeat: no-repeat;
+  float: left;
 }
 
 div#controls {
   padding: 3em;
+  width:30%;
   max-width: 1200px;
-  margin: 0 auto;
+  float:left;
+  /*margin: 0 auto;*/
 }
 
 div#controls div {
@@ -43,7 +56,9 @@ div#controls div#preview {
   margin: 0 1.5em;
   text-align: center;
 }
-
+#roomcontrols{
+  display: none;
+}
 div#controls p.instructions {
   text-align: left;
   margin-bottom: 1em;
@@ -53,7 +68,7 @@ div#controls p.instructions {
   color: #777776;
 }
 
-div#controls button {
+ button {
   width: 15em;
   height: 2.5em;
   margin-top: 1.75em;
@@ -100,6 +115,7 @@ div#controls div#preview button#button-preview {
 
 div#controls div#log {
   border: 1px solid #686865;
+  display:none;
 }
 
 div#controls div#room-controls {
