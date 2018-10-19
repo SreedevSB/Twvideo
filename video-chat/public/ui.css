@@ -52,3 +52,23 @@ body{
 .dominant{
 	background-color: 
 }
+
+.footer{
+	background-color: rgba(5,5,5,0.5);
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	margin: auto;
+	padding: 10px;
+}
+p.instructions{
+	display: inline-block;
+	color: rgb(255,255,255);
+}
+
+.room{
+	margin-left:40px;
+	display: inline-block;
+	float: left;
+}
+
