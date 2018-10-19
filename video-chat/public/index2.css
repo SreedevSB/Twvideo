@@ -45,13 +45,9 @@ div#controls {
   /*margin: 0 auto;*/
 }
 
-div#controls div {
-  float: left;
-}
-
 div#controls div#room-controls,
 div#controls div#preview {
-  width: 16em;
+  /*width: 16em;*/
   text-align: center;
 }
 #roomcontrols{
@@ -115,10 +111,16 @@ div#controls div#log {
   display:none;
 }
 
-div#controls div#room-controls {
+div#room-controls {
   display: none;
 }
-
+input[type=text]{
+  padding: 5px;
+  border-radius: 5px;
+}
+#identity{
+  margin: 20px 0px 10px 0px;
+}
 div#controls div#room-controls input {
   width: 100%;
   height: 2.5em;
