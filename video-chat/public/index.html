@@ -4,13 +4,14 @@
 <head>
   <title>Twilio Video - Video Quickstart</title>
   <link rel="stylesheet" href="index2.css">
-</head>
+
+  <link rel="stylesheet" href="ui.css"></head>
 
 <body>
-  <div id="controls">
+  <div class="lbar sec" id="controls">
     <div id="preview">
       <p class="instructions"></p>
-      <div id="local-media"></div>
+      <div class="thumbnail" id="local-media"></div>
       <div id="dominantSpeaker"></div>
       <button id="button-preview">Preview My Camera</button>
     </div>
@@ -29,7 +30,8 @@
     </div>
     <div id="log"></div>
   </div>
-  <div id="remote-media"></div>
+  <div class="centre sec" id="remote-media"></div>
+  <div class="rbar sec">right</div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="index.js"></script>
