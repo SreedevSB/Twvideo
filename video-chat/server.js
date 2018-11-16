@@ -1,4 +1,7 @@
 const path = require('path');
+const fs = require('fs');
+const http = require('http');
+const https = require('https');
 const express = require('express');
 const twilio = require('twilio');
 const AccessToken = twilio.jwt.AccessToken;
@@ -34,7 +37,17 @@ app.get('/token', function(request, response) {
 const public = path.join(__dirname, './public');
 app.use('/', express.static(public));
 
-var port = process.env.PORT || 3000;
-app.listen(port, function() {
-  console.log('Express server running on *:' + port);
+var options = {
+    key: fs.readFileSync('./cert/sslkey.pem'),
+    cert: fs.readFileSync('./cert/sslcert.pem'),
+};
+const httpServer=http.createServer(app);
+const httpsServer=https.createServer(options,app);
+
+httpServer.listen(80, function() {
+  console.log('Express server running on *:80');
+});
+
+httpsServer.listen(443, function() {
+  console.log('Express server running on *:443');
 });

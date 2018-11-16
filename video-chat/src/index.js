@@ -28,7 +28,7 @@ function canScreenShare() {
 }
 
 function getUserScreen() {
-  var extensionId = 'mjokidnabfagknlihicmfhndpdkinlln';
+  var extensionId = 'fhbjgbiflinjbdggehcddcbncdddomop';
   if (!canScreenShare()) {
     return;
   }
