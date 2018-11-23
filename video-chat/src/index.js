@@ -154,7 +154,8 @@ function getToken(id) {
     document.getElementById('button-share-screen').onclick = function() {
       getUserScreen().then(function(stream) {
         screenTrack = stream.getVideoTracks()[0];
-        activeRoom.localParticipant.publishTrack(screenTrack);
+        //activeRoom.localParticipant.publishTrack(screenTrack);
+        attachTracks2(screenTrack,previewContainer);
         document.getElementById('button-share-screen').style.display = 'none';
         document.getElementById('button-unshare-screen').style.display =
           'inline';
