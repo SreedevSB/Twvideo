@@ -75,6 +75,11 @@ function attachTracks2(tracks, container) {
     container.appendChild(track.attach());
   });
 }
+function attachTracks3(track, container) {
+    container.innerHTML='';
+    container.appendChild(track.attach());
+}
+
 // Attach the Participant's Tracks to the DOM.
 function attachParticipantTracks(participant, container) {
   var tracks = Array.from(participant.tracks.values());
@@ -154,8 +159,9 @@ function getToken(id) {
     document.getElementById('button-share-screen').onclick = function() {
       getUserScreen().then(function(stream) {
         screenTrack = stream.getVideoTracks()[0];
-        //activeRoom.localParticipant.publishTrack(screenTrack);
-        attachTracks2(screenTrack,previewContainer);
+        activeRoom.localParticipant.publishTrack(screenTrack,{ name: 'screenshare'});
+        //var previewContainer = document.getElementById('dominantSpeaker');
+        //attachTracks3(screenTrack,previewContainer);
         document.getElementById('button-share-screen').style.display = 'none';
         document.getElementById('button-unshare-screen').style.display =
           'inline';
@@ -202,10 +208,19 @@ function roomJoined(room) {
   });
 
   // When a Participant adds a Track, attach it to the DOM.
-  room.on('trackAdded', function(track, participant) {
-    log(participant.identity + ' added track: ' + track.kind);
-    var previewContainer = document.getElementById('remote-media');
-    attachTracks([track], previewContainer);
+  room.on('trackAdded', function(track, participant,publication) {
+    if(track.name=='screenshare'){
+      log(participant.identity + ' added track: ' + track.kind);
+      var ds=document.getElementById('dominantSpeaker');
+      ds.style.display='none';
+      var previewContainer = document.getElementById('dominantSpeaker2');
+      previewContainer.style.display='block';
+      attachTracks2([track], previewContainer);
+    } else{
+      log(participant.identity + ' added track: ' + track.kind);
+      var previewContainer = document.getElementById('remote-media');
+      attachTracks([track], previewContainer);
+    }
   });
 
 
@@ -221,6 +236,13 @@ function roomJoined(room) {
   room.on('trackRemoved', function(track, participant) {
     log(participant.identity + ' removed track: ' + track.kind);
     detachTracks([track]);
+
+    if(track.name=='screenshare'){
+      var ds=document.getElementById('dominantSpeaker');
+      ds.style.display='block';
+      var ds2=document.getElementById('dominantSpeaker2');
+      ds2.style.display='none';
+  }
   });
 
   // When a Participant leaves the Room, detach its Tracks.

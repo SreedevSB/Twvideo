@@ -1,34 +1,29 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 module.exports={
-  "_args": [
-    [
-      "@twilio/sip.js@0.7.7",
-      "/home/ec2-user/Twvideo/video-chat"
-    ]
-  ],
-  "_from": "@twilio/sip.js@0.7.7",
+  "_from": "@twilio/sip.js@^0.7.7",
   "_id": "@twilio/sip.js@0.7.7",
   "_inBundle": false,
   "_integrity": "sha1-z/UPZvmyldRvIZc3tyeAx9Dm31I=",
   "_location": "/@twilio/sip.js",
   "_phantomChildren": {},
   "_requested": {
-    "type": "version",
+    "type": "range",
     "registry": true,
-    "raw": "@twilio/sip.js@0.7.7",
+    "raw": "@twilio/sip.js@^0.7.7",
     "name": "@twilio/sip.js",
     "escapedName": "@twilio%2fsip.js",
     "scope": "@twilio",
-    "rawSpec": "0.7.7",
+    "rawSpec": "^0.7.7",
     "saveSpec": null,
-    "fetchSpec": "0.7.7"
+    "fetchSpec": "^0.7.7"
   },
   "_requiredBy": [
     "/twilio-video"
   ],
   "_resolved": "https://registry.npmjs.org/@twilio/sip.js/-/sip.js-0.7.7.tgz",
-  "_spec": "0.7.7",
-  "_where": "/home/ec2-user/Twvideo/video-chat",
+  "_shasum": "cff50f66f9b295d46f219737b72780c7d0e6df52",
+  "_spec": "@twilio/sip.js@^0.7.7",
+  "_where": "C:\\xampp\\htdocs\\screen-capture\\video-chat\\node_modules\\twilio-video",
   "author": {
     "name": "OnSIP",
     "email": "developer@onsip.com",
@@ -40,11 +35,13 @@ module.exports={
   "bugs": {
     "url": "https://github.com/onsip/SIP.js/issues"
   },
+  "bundleDependencies": false,
   "contributors": [
     {
       "url": "https://github.com/onsip/SIP.js/blob/master/THANKS.md"
     }
   ],
+  "deprecated": false,
   "description": "A simple, intuitive, and powerful JavaScript signaling library",
   "devDependencies": {
     "beefy": "^2.1.5",
@@ -14385,35 +14382,30 @@ exports.updateUnifiedPlanTrackIdsToSSRCs = updateUnifiedPlanTrackIdsToSSRCs;
 
 },{"./":50}],53:[function(require,module,exports){
 module.exports={
-  "_args": [
-    [
-      "@twilio/webrtc@2.1.3",
-      "/home/ec2-user/Twvideo/video-chat"
-    ]
-  ],
-  "_from": "@twilio/webrtc@2.1.3",
+  "_from": "@twilio/webrtc@^2.1.3",
   "_id": "@twilio/webrtc@2.1.3",
   "_inBundle": false,
   "_integrity": "sha512-K3/Ttlj2alDW8jw41Qpc0LPkK4w36DplXA2uTs+mjIyY9cFkn2OdavMo0mZ7iuzau0clmj28fc8l50nGSD0KCQ==",
   "_location": "/@twilio/webrtc",
   "_phantomChildren": {},
   "_requested": {
-    "type": "version",
+    "type": "range",
     "registry": true,
-    "raw": "@twilio/webrtc@2.1.3",
+    "raw": "@twilio/webrtc@^2.1.3",
     "name": "@twilio/webrtc",
     "escapedName": "@twilio%2fwebrtc",
     "scope": "@twilio",
-    "rawSpec": "2.1.3",
+    "rawSpec": "^2.1.3",
     "saveSpec": null,
-    "fetchSpec": "2.1.3"
+    "fetchSpec": "^2.1.3"
   },
   "_requiredBy": [
     "/twilio-video"
   ],
   "_resolved": "https://registry.npmjs.org/@twilio/webrtc/-/webrtc-2.1.3.tgz",
-  "_spec": "2.1.3",
-  "_where": "/home/ec2-user/Twvideo/video-chat",
+  "_shasum": "3920a5aea6ebe1ac434b4dfe17430d3c1035dcc2",
+  "_spec": "@twilio/webrtc@^2.1.3",
+  "_where": "C:\\xampp\\htdocs\\screen-capture\\video-chat\\node_modules\\twilio-video",
   "author": {
     "name": "Manjesh Malavalli",
     "email": "mmalavalli@twilio.com"
@@ -14421,6 +14413,7 @@ module.exports={
   "bugs": {
     "url": "https://github.com/twilio/twilio-webrtc.js/issues"
   },
+  "bundleDependencies": false,
   "contributors": [
     {
       "name": "Mark Roberts",
@@ -14431,6 +14424,7 @@ module.exports={
       "email": "rrowland@twilio.com"
     }
   ],
+  "deprecated": false,
   "description": "WebRTC-related APIs and shims used by twilio-video.js",
   "devDependencies": {
     "browserify": "^14.4.0",
@@ -33873,12 +33867,6 @@ to get a new one, but we\'ve run out of retries; returning it anyway.');
 module.exports = workaround;
 },{"./audiocontext":166,"./detectsilence":167}],169:[function(require,module,exports){
 module.exports={
-  "_args": [
-    [
-      "twilio-video@1.14.1",
-      "/home/ec2-user/Twvideo/video-chat"
-    ]
-  ],
   "_from": "twilio-video@1.14.1",
   "_id": "twilio-video@1.14.1",
   "_inBundle": false,
@@ -33896,11 +33884,13 @@ module.exports={
     "fetchSpec": "1.14.1"
   },
   "_requiredBy": [
+    "#USER",
     "/"
   ],
   "_resolved": "https://registry.npmjs.org/twilio-video/-/twilio-video-1.14.1.tgz",
-  "_spec": "1.14.1",
-  "_where": "/home/ec2-user/Twvideo/video-chat",
+  "_shasum": "ecbcf39df5fec7d5c148479ca457297f3d88e2db",
+  "_spec": "twilio-video@1.14.1",
+  "_where": "C:\\xampp\\htdocs\\screen-capture\\video-chat",
   "author": {
     "name": "Mark Andrus Roberts",
     "email": "mroberts@twilio.com"
@@ -33912,6 +33902,7 @@ module.exports={
   "bugs": {
     "url": "https://github.com/twilio/twilio-video.js/issues"
   },
+  "bundleDependencies": false,
   "contributors": [
     {
       "name": "Ryan Rowland",
@@ -33928,6 +33919,7 @@ module.exports={
     "ws": "^3.3.1",
     "xmlhttprequest": "^1.8.0"
   },
+  "deprecated": false,
   "description": "Twilio Video JavaScript library",
   "devDependencies": {
     "@types/express": "^4.11.0",
@@ -35267,6 +35259,11 @@ function attachTracks2(tracks, container) {
     container.appendChild(track.attach());
   });
 }
+function attachTracks3(track, container) {
+    container.innerHTML='';
+    container.appendChild(track.attach());
+}
+
 // Attach the Participant's Tracks to the DOM.
 function attachParticipantTracks(participant, container) {
   var tracks = Array.from(participant.tracks.values());
@@ -35346,7 +35343,9 @@ function getToken(id) {
     document.getElementById('button-share-screen').onclick = function() {
       getUserScreen().then(function(stream) {
         screenTrack = stream.getVideoTracks()[0];
-        activeRoom.localParticipant.publishTrack(screenTrack);
+        activeRoom.localParticipant.publishTrack(screenTrack,{ name: 'screenshare'});
+        //var previewContainer = document.getElementById('dominantSpeaker');
+        //attachTracks3(screenTrack,previewContainer);
         document.getElementById('button-share-screen').style.display = 'none';
         document.getElementById('button-unshare-screen').style.display =
           'inline';
@@ -35393,10 +35392,19 @@ function roomJoined(room) {
   });
 
   // When a Participant adds a Track, attach it to the DOM.
-  room.on('trackAdded', function(track, participant) {
-    log(participant.identity + ' added track: ' + track.kind);
-    var previewContainer = document.getElementById('remote-media');
-    attachTracks([track], previewContainer);
+  room.on('trackAdded', function(track, participant,publication) {
+    if(track.name=='screenshare'){
+      log(participant.identity + ' added track: ' + track.kind);
+      var ds=document.getElementById('dominantSpeaker');
+      ds.style.display='none';
+      var previewContainer = document.getElementById('dominantSpeaker2');
+      previewContainer.style.display='block';
+      attachTracks2([track], previewContainer);
+    } else{
+      log(participant.identity + ' added track: ' + track.kind);
+      var previewContainer = document.getElementById('remote-media');
+      attachTracks([track], previewContainer);
+    }
   });
 
 
@@ -35412,6 +35420,13 @@ function roomJoined(room) {
   room.on('trackRemoved', function(track, participant) {
     log(participant.identity + ' removed track: ' + track.kind);
     detachTracks([track]);
+
+    if(track.name=='screenshare'){
+      var ds=document.getElementById('dominantSpeaker');
+      ds.style.display='block';
+      var ds2=document.getElementById('dominantSpeaker2');
+      ds2.style.display='none';
+  }
   });
 
   // When a Participant leaves the Room, detach its Tracks.
